@@ -115,4 +115,10 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+
+LOGIN_REDIRECT_URL = "posts"
+
+LOGOUT_REDIRECT_URL = "posts"
+
+AUTH_USER_MODEL = 'insta.InstaUser'
