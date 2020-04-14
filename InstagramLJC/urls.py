@@ -18,7 +18,7 @@ from django.urls import path, include
 from insta.views import SignUp
 
 urlpatterns = [path("admin/", admin.site.urls), 
-            path("insta/", include("insta.urls")),
+            path("", include("insta.urls")),
             path("auth/", include("django.contrib.auth.urls")),
             path("auth/signup/", SignUp.as_view(), name="signup"),
             ]
