@@ -33,5 +33,5 @@ class PostDeleteView(DeleteView):
 
 class SignUp(CreateView):
     form_class = CustomUserCreationForm
-    template_name = 'signup.html'
+    template_name = 'signup.html'    
     success_url = reverse_lazy("login")
