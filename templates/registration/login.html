@@ -1,7 +1,23 @@
-<h2>Login</h2>
+<html>
 
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Login</button>
-</form>
+<head>
+    {% load static %}
+    <title>Jiachen's Website</title>
+    <link rel="stylesheet" href="{% static 'css/stylelogin.css' %}">
+
+<body>
+    <div class="loginbox">
+        <img src="{% static 'images/Columbia_Lions_logo.png' %}" class="avatar">
+        <h1>Login Here</h1>
+        <form method="post" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" name="" value="Login">
+            <a href="{% url 'signup' %}">Don't have an account?</a><br>
+        </form>
+
+    </div>
+</body>
+</head>
+
+</html>
